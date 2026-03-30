@@ -73,6 +73,21 @@
   }
   </script>
 
+  <!-- FAQ Schema for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Qual o horário de entrega de gás do Chico do Gás?","acceptedAnswer":{"@type":"Answer","text":"Atendemos todos os dias da semana, incluindo feriados, das 7h às 22h em Águas Lindas de Goiás."}},
+      {"@type":"Question","name":"O Chico do Gás entrega gás 13kg e 45kg?","acceptedAnswer":{"@type":"Answer","text":"Sim! Entregamos botijões de gás 13kg (residencial) e 45kg (comercial) com rapidez e segurança em toda Águas Lindas de Goiás."}},
+      {"@type":"Question","name":"Como faço para pedir gás no Chico do Gás?","acceptedAnswer":{"@type":"Answer","text":"Você pode pedir pelo WhatsApp (61) 3613-1493, ligar no telefone (61) 3613-1493 ou pelo Instagram @chico.dogas. A entrega é rápida!"}},
+      {"@type":"Question","name":"O Chico do Gás é distribuidor da Nacional Gas?","acceptedAnswer":{"@type":"Answer","text":"Sim, somos distribuidores oficiais da Nacional Gas em Águas Lindas de Goiás. Vendemos gás com procedência e qualidade garantida."}},
+      {"@type":"Question","name":"Qual o endereço do Chico do Gás?","acceptedAnswer":{"@type":"Answer","text":"Estamos localizados na Quadra 51 Lote 23, Jardim Pérola 2, Águas Lindas de Goiás – GO."}}
+    ]
+  }
+  </script>
+
   <!-- Google Ads Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16756944377"></script>
   <script>
@@ -990,6 +1005,109 @@
     </div>
   </footer>
 
+  <!-- ===== HOW IT WORKS ===== -->
+  <style>
+    #como-funciona{background:var(--gray-100);}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;margin-top:48px;}
+    .step-card{background:var(--white);border-radius:var(--radius);padding:36px 28px;box-shadow:var(--shadow);border:1px solid var(--gray-200);text-align:center;transition:var(--transition);}
+    .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+    .step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--orange),var(--orange-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:#fff;margin:0 auto 20px;}
+    .step-card h3{font-size:1.05rem;font-weight:700;color:var(--blue-dark);margin-bottom:10px;}
+    .step-card p{font-size:.94rem;color:var(--gray-600);line-height:1.65;}
+    #faq{background:var(--white);}
+    .faq-list{max-width:720px;margin:48px auto 0;display:flex;flex-direction:column;gap:12px;}
+    .faq-item{border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);overflow:hidden;transition:border-color var(--transition);}
+    .faq-item.open{border-color:var(--orange);}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;color:var(--blue-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:background var(--transition);}
+    .faq-q:hover{background:var(--gray-100);}
+    .faq-q svg{width:20px;height:20px;color:var(--orange);flex-shrink:0;transition:transform .3s;}
+    .faq-item.open .faq-q svg{transform:rotate(45deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+    .faq-a p{padding:0 24px 20px;font-size:.96rem;color:var(--gray-600);line-height:1.7;}
+    .faq-item.open .faq-a{max-height:200px;}
+    #mapa{background:var(--blue-dark);padding:0;}
+    .map-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:400px;}
+    .map-info{padding:64px 48px;display:flex;flex-direction:column;justify-content:center;gap:20px;}
+    .map-info h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;color:var(--white);line-height:1.2;}
+    .map-info h2 span{color:var(--orange);}
+    .map-info p{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.7;}
+    .map-info .btn{align-self:flex-start;}
+    .map-iframe iframe{width:100%;height:100%;min-height:400px;border:0;display:block;filter:grayscale(20%) contrast(1.1);}
+    @media(max-width:768px){.map-wrap{grid-template-columns:1fr;}.map-info{padding:40px 24px;}.map-iframe iframe{min-height:280px;}}
+  </style>
+
+  <section id="como-funciona" aria-labelledby="como-funciona-title">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-label">Simples assim</span>
+        <h2 class="section-title" id="como-funciona-title">Como <span>Funciona</span></h2>
+        <p class="section-desc">Peça seu gás em 3 passos e receba rapidinho na sua porta.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-num">1</div>
+          <h3>Ligue ou mande mensagem</h3>
+          <p>Chame no WhatsApp (61) 3613-1493 ou ligue. Atendemos todos os dias das 7h às 22h!</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">2</div>
+          <h3>Confirm seu endereço</h3>
+          <p>Informe o endereço e o tipo de botijão: 13kg (residencial) ou 45kg (comercial).</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">3</div>
+          <h3>Receba na porta</h3>
+          <p>Entregamos com segurança e rapidez. Pagamento na entrega, sem complicação!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-label">Dúvidas Frequentes</span>
+        <h2 class="section-title" id="faq-title">Perguntas <span>Frequentes</span></h2>
+        <p class="section-desc">Respondemos as principais dúvidas sobre entrega de gás em Águas Lindas.</p>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Qual o horário de entrega de gás?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Atendemos todos os dias da semana, incluindo feriados, das <strong>7h às 22h</strong> em Águas Lindas de Goiás.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Entregam gás 13kg e 45kg?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Sim! Entregamos <strong>botijão 13kg</strong> (residencial) e <strong>45kg</strong> (comercial) com segurança em toda Águas Lindas de Goiás e região da Pérola.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Como faço para pedir meu gás?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>É muito fácil! Basta ligar ou chamar no <strong>WhatsApp (61) 3613-1493</strong>. Também atendemos pelo Instagram <strong>@chico.dogas</strong>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">O Chico do Gás é distribuidor oficial da Nacional Gas?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Sim! Somos distribuidores <strong>oficiais da Nacional Gas</strong> em Águas Lindas de Goiás. Produto com procedência, qualidade e segurança garantidas.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Qual o endereço do depósito?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Nosso depósito fica na <strong>Quadra 51 Lote 23, Jardim Pérola 2</strong>, Águas Lindas de Goiás – GO.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mapa" aria-label="Localização Chico do Gás no mapa">
+    <div class="map-wrap">
+      <div class="map-info">
+        <h2>Nos Encontre em<br><span>Águas Lindas de Goiás</span></h2>
+        <p>Qd 51 Lt 23, Jardim Pérola 2<br>Águas Lindas de Goiás – GO</p>
+        <a href="https://maps.google.com/?q=Quadra+51+Lote+23+Jardim+Perola+2+Aguas+Lindas+de+Goias" target="_blank" rel="noopener" class="btn btn-primary">Abrir no Google Maps</a>
+      </div>
+      <div class="map-iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.5!2d-48.2775!3d-15.7517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSmFyZGltIFDDqXJvbGEgMiwgw4FndWFzIExpbmRhcyBkZSBHb2nDoXM!5e0!3m2!1spt-BR!2sbr!4v1" loading="lazy" allowfullscreen title="Localização Chico do Gás – Águas Lindas de Goiás" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/556136131493" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Abrir WhatsApp do Chico do Gás" id="floating-whatsapp">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1038,6 +1156,24 @@
       dot.className = 'flame-dot';
       dot.style.cssText = `left:${left}%; bottom:10%; --dur:${3 + i}s; --delay:${i * 0.7}s;`;
       flameContainer.appendChild(dot);
+    });
+  </script>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
     });
   </script>
 </body>
